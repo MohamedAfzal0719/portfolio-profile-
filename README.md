@@ -1,3 +1,4 @@
+PERSONAL PORTFOLIO PROFILE
 1. Introduction
 This project is a personal portfolio website designed to showcase academic background, skills, projects, and internships.
 It is built using HTML, CSS, and JavaScript, featuring an animated gradient background, section-based navigation, skill bars, and project cards. The portfolio provides an interactive and professional way to present personal achievements and career goals.
