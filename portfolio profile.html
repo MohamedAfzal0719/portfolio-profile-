@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohamed Afzal S - Portfolio</title>
+  <!-- FontAwesome for skill icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Background Gradient Animation */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(270deg, #6a11cb, #2575fc, #ff758c);
+      background-size: 600% 600%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Navbar */
+    nav {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 16px;
+      margin: 0 15px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav button:hover {
+      color: #ffe259;
+    }
+
+    /* Section Styling */
+    section {
+      display: none;
+      padding: 100px 20px;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    section.active {
+      display: block;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1, h2 {
+      color: #fff;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 12px;
+      width: 80%;
+      max-width: 700px;
+      backdrop-filter: blur(10px);
+      text-align: left;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #ffe259;
+    }
+
+    .card a {
+      color: #ffe259;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Skill Bars */
+    .skill-bar {
+      margin: 15px 0;
+    }
+
+    .skill-bar p {
+      margin: 5px 0;
+      font-weight: bold;
+    }
+
+    .bar {
+      background: rgba(255,255,255,0.2);
+      border-radius: 20px;
+      overflow: hidden;
+      height: 12px;
+    }
+
+    .fill {
+      background: #ffe259;
+      height: 12px;
+      border-radius: 20px;
+      transition: width 1s ease-in-out;
+    }
+
+    /* Resume Button */
+    .resume-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #d859ff;
+      color: black;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .resume-btn:hover {
+      background: #0077ff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('skills')">Skills</button>
+    <button onclick="showSection('projects')">Projects</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </nav>
+
+  <!-- Sections -->
+  <section id="home" class="active">
+    <h1>👋 Hi, I'm Mohamed Afzal S</h1>
+    <p>Computer Science and Engineering undergraduate passionate about harnessing AI for impactful applications in healthcare, natural language processing, and image processing.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>👨‍💻 I am pursuing a <strong>B.Tech in Computer Science and Engineering</strong> at Crescent University, Chennai, with a CGPA of <strong>7.0/10</strong>. I am passionate about using AI and Data Science to build impactful, real-world solutions in healthcare, natural language processing, and image analysis.</p>
+
+      <p>✨ I have hands-on experience in <strong>machine learning, generative AI, and data visualization</strong> through academic projects and internships with <strong>TATA Forage</strong> and <strong>IBM</strong>. These opportunities helped me explore AI-driven analytics, web app development, and interactive dashboards.</p>
+
+      <p>🏆 <strong>Certifications & Achievements:</strong></p>
+      <ul>
+        <li>AI & ML Virtual Internship – TATA Forage</li>
+        <li>IBM Internship – Cloud and Web Development</li>
+      </ul>
+
+      <p>🌱 I enjoy working on projects that combine <strong>technology and creativity</strong>, such as predictive healthcare models, AI-powered dashboards, and graph algorithms for real-world problems.</p>
+
+      <p>🚀 My career aspiration is to become a <strong>Data Scientist / AI Engineer</strong>, contributing to innovative AI-driven solutions that create real-world impact.</p>
+
+      <a href="Afzal Resume.pdf" class="resume-btn" download>📄 Download My Resume</a>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+
+    <div class="card">
+      <h3>💻 Programming</h3>
+      <div class="skill-bar">
+        <p><i class="fab fa-python"></i> Python</p>
+        <div class="bar"><div class="fill" style="width: 90%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <p><i class="fas fa-database"></i> SQL</p>
+        <div class="bar"><div class="fill" style="width: 80%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <p><i class="fab fa-html5"></i> HTML, <i class="fab fa-css3-alt"></i> CSS, <i class="fab fa-js-square"></i> JavaScript</p>
+        <div class="bar"><div class="fill" style="width: 85%"></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🧠 Machine Learning</h3>
+      <div class="skill-bar">
+        <p>Pandas, Numpy, Scikit-learn</p>
+        <div class="bar"><div class="fill" style="width: 85%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <p>TensorFlow, Generative AI</p>
+        <div class="bar"><div class="fill" style="width: 75%"></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>📊 Visualization</h3>
+      <div class="skill-bar">
+        <p>Power BI, Tableau</p>
+        <div class="bar"><div class="fill" style="width: 80%"></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🤝 Soft Skills</h3>
+      <p>Effective Communication, Teamwork & Collaboration</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects & Internships</h2>
+
+    <div class="card">
+      <h3>🤖 Generative AI – Data Analytics (TATA Forage Internship)</h3>
+      <p>Applied Generative AI tools for business data analysis and automated reporting with LLMs, improving decision-making speed and efficiency.</p>
+      <a href="https://github.com/MohamedAfzal0719" target="_blank">🔗 View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>🧠 AI & ML Internship – NSP Nexus</h3>
+      <p>Developed supervised ML models including Iris Classification (KNN, Decision Tree) and Student Performance Prediction (Logistic Regression). Built a Python-based AI chatbot using NLP and APIs.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔗 Graph Theory – Maximum Flow (Dinic’s Algorithm)</h3>
+      <p>Implemented a Python-based solution for maximum flow problems. Applied graph theory concepts in transportation and networking use cases.</p>
+    </div>
+
+    <div class="card">
+      <h3>📱 Dropout Support App (Android Studio)</h3>
+      <p>Designed and developed an Android app to support student dropout prevention, integrating user-friendly features to track and guide at-risk students.</p>
+    </div>
+
+    <div class="card">
+      <h3>💡 Lumora Smart Lamp Simulation</h3>
+      <p>Created a simulation of a smart lamp with IoT-based automation features, exploring hardware-software integration concepts.</p>
+    </div>
+
+    <div class="card">
+      <h3>🎥 Web Development Internship – IBM, Chennai</h3>
+      <p>Built a responsive Netflix-style web application using HTML, CSS, and JavaScript with dynamic content features for real-time updates.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:afzalmohamed098@gmail.com">afzalmohamed098@gmail.com</a></p>
+      <p>Phone: +91 7305587959</p>
+      <p>GitHub: <a href="https://github.com/MohamedAfzal0719" target="_blank">AFZAL</a></p>
+    </div>
+  </section>
+
+  <!-- Script for Section Switching -->
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(sec => sec.classList.remove("active"));
+      document.getElementById(sectionId).classList.add("active");
+    }
+  </script>
+</body>
+</html>
